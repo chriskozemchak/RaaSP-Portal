@@ -19,49 +19,11 @@
 </head>
 <body class="is-preload">
 
-    <!-- Header -->
-    <div id="header">
 
-        <div class="top">
-
-            <!-- Logo -->
-            <div id="logo">
-                <span class="image"><img src="images/avatar.png" alt="" /></span>
-                <h1 id="title">@User.Identity.Name</h1>
-                <p>A Research Platform</p>
-            </div>
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#top" id="top-link"><span class="icon fa-flask">Home</span></a></li>
-                    <!-- Customize Partial for RaaSP-->
-                    <li><a href="#register" id="register-link"><span class="icon fa-user-plus">Register</span></a></li>
-                    <li><a href="#about" id="about-link"><span class="icon fa-server">About FABRIC</span></a></li>
-                    <li><a href="#contact" id="contact-link"><span class="icon fa-question-circle">Contact & Help</span></a></li>
-                </ul>
-            </nav>
-
-        </div>
-
-        <div class="bottom">
-
-            <!-- Quick Links -->
-            <ul class="icons">
-                <li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
-                <li><a href="dashboard-pi.html" class="icon fa-user"><span class="label">PI Dashboard</span></a></li>
-                <li><a href="dashboard-admin.html" class="icon fa-cogs"><span class="label">Admin Page</span></a></li>
-            </ul>
-
-        </div>
-
-    </div>
 
     <!-- Content -->
-    <div id="main">
         @RenderBody()
 
-    </div>
 
     <!-- Footer -->
     <div id="footer">
