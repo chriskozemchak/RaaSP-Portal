@@ -3,56 +3,87 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RaasP_Portal_Internal</title>
-
+    <title>@ViewData["Title"] - Internal</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">RaasP_Portal_Internal</a>
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image"><img src="images/avatar.png" alt="" /></span>
+                <h1 id="title">@User.Identity.Name</h1>
+                <p>A Research Platform</p>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#top" id="top-link"><span class="icon fa-flask">Home</span></a></li>
+                    <!-- Customize Partial for RaaSP-->
+                    <li><a href="#register" id="register-link"><span class="icon fa-user-plus">Register</span></a></li>
+                    <li><a href="#about" id="about-link"><span class="icon fa-server">About FABRIC</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon fa-question-circle">Contact & Help</span></a></li>
                 </ul>
-                <p class="nav navbar-text navbar-right">Hello, @User.Identity.Name!</p>
-            </div>
+            </nav>
+
         </div>
-    </nav>
 
-    <partial name="_CookieConsentPartial" />
+        <div class="bottom">
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - RaasP_Portal_Internal</p>
-        </footer>
+            <!-- Quick Links -->
+            <ul class="icons">
+                <li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
+                <li><a href="dashboard-pi.html" class="icon fa-user"><span class="label">PI Dashboard</span></a></li>
+                <li><a href="dashboard-admin.html" class="icon fa-cogs"><span class="label">Admin Page</span></a></li>
+            </ul>
+
+        </div>
+
     </div>
 
+    <!-- Content -->
+    <div id="main">
+        @RenderBody()
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; RTS. All rights reserved.</li>
+            <li>FABRIC</li>
+        </ul>
+
+    </div>
+    <!-- Scripts -->
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <script src="~/js/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="~/js/jquery.scrolly.min.js"></script>
+        <script src="~/js/jquery.scrollex.min.js"></script>
+        <script src="~/js/browser.min.js"></script>
+        <script src="~/js/breakpoints.min.js"></script>
+        <script src="~/js/util.js"></script>
+        <script src="~/js/main.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
