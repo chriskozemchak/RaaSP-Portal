@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RaasP_Portal</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" asp-append-version="true" />
+    </environment>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image"><img src="images/avatar.png" alt="" /></span>
+                <h1 id="title">FABRIC</h1>
+                <p>A Research Platform</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#top" id="top-link"><span class="icon fa-flask">Home</span></a></li>
+                    <!-- Customize Partial for RaaSP-->
+                    <li><a href="#register" id="register-link"><span class="icon fa-user-plus">Register</span></a></li>
+                    <li><a href="#about" id="about-link"><span class="icon fa-server">About FABRIC</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon fa-question-circle">Contact & Help</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Quick Links -->
+            <ul class="icons">
+                <li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
+                <li><a href="dashboard-pi.html" class="icon fa-user"><span class="label">PI Dashboard</span></a></li>
+                <li><a href="dashboard-admin.html" class="icon fa-cogs"><span class="label">Admin Page</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    @*<ul class="nav navbar-nav">
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+        </ul>*@
+
+
+    <partial name="_CookieConsentPartial" />
+
+
+    <!-- Main -->
+    <div id="main">
+        @RenderBody()
+        <!-- Intro -->
+        <section id="top" class="one dark cover">
+            <div class="container">
+
+                <header class="">
+                    <h2 class="alt shadow">
+                        <strong>Welcome to FABRIC</strong>.
+                    </h2>
+                    <p>
+                        A Research As A Service Platform
+                    </p>
+                </header>
+
+                <footer>
+                    <a href="#register" class="button scrolly">Register</a>
+                </footer>
+
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="register" class="two">
+            <div id='registration' class="container">
+
+                <header>
+                    <h2>Submit a Registration for FABRIC</h2>
+                </header>
+
+                <article class="item">
+                    <header>To use FABRIC, you need the following:</header>
+                    <ul>
+                        <li>An account on the RaaSP Cloud Architecture</li>
+                        <li>A Project Environment within which to conduct your research</li>
+                    </ul>
+                </article>
+
+                <form method="post" action="#">
+                    <div class="row">
+                        <div class="col-6 col-12-mobile"><input type="text" name="first name" placeholder="First Name" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" name="last email" placeholder="Last Name" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" name="phone" placeholder="Phone" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" name="username" placeholder="Username" /></div>
+                        <div class="col-6 col-12-mobile ui-widget"><input id="institute" class="ctsa" type="text" name="project" placeholder="CTSA Institute" /></div>
+
+                        <div class="col-12">Select Your Account Type</div>
+
+                        <div class="col-6 col-12-mobile">Basic:<input class="toggle" type="radio" checked="checked" name="account" value="basic"></div>
+                        <div class="col-6 col-12-mobile">Investigator:<input class="toggle" type="radio" name="account" value="investigator"></div>
+                        <div id="basic" class="row col-12">
+                            <div class="col-12 ui-widget"><input id="projectName" class="projects" type="text" name="project" placeholder="Research Project Name" /></div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="Access Request Message"></textarea>
+                            </div>
+                        </div>
+                        <div id="investigator" style="display: none" class="row col-12">
+                            <div class="col-12"><input id="projectName" type="text" name="projectName" placeholder="Name of Research Project" /></div>
+                            <div class="col-12">
+
+                                <select id="projecType" name="projectType">
+                                    <option>Select Project Type</option>
+                                    <option>Geonomics</option>
+                                    <option>Mathematics</option>
+                                    <option>Clinical</option>
+                                    <option>Other</option>
+
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="Research Project Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a href="#submission" class="button submit">Submit</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div id='submission' class="container" style="display: none">
+
+                <header>
+                    <h2>Your Request Has Been Submitted</h2>
+                </header>
+
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>About FABRIC</h2>
+                </header>
+
+                <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+
+                <p>
+                    The Clinical and Translational Science Institute at Children's National (CTSI-CN) is supported through the National Institutes of Health (NIH) Clinical and Translational Science Award (CTSA) program, grant UL1TR001876 and KL2TR001877. The CTSA program is led by the NIH's National Center for Advancing Translational Sciences (NCATS). The content of this website is solely the responsibility of the CTSI-CN and does not necessarily represent the official views of the NIH.
+                </p>
+
+                <p>
+                    FABRIC is a collaborative workspace for research teams living on the Microsoft Azure cloud. The workspace benefits of the vast array of services and utilities which come as part of the Azure offer, but it also increments them with applications coming from the large open source community.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="four">
+            <div class="container">
+
+                <header>
+                    <h2>Contact & Help</h2>
+                </header>
+
+                <p>
+                    If you are having issues with your account or wish to reach our support staff please fill out the information below.
+                </p>
+
+                <form method="post" action="#">
+                    <div class="row">
+                        <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+                        <div class="col-12">
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" value="Send Message" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; RTS. All rights reserved.</li>
+            <li>FABRIC</li>
+        </ul>
+
+    </div>
+    <!-- Scripts -->
+    <environment include="Development">
+
+        <script src="~/js/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="~/js/jquery.scrolly.min.js"></script>
+        <script src="~/js/jquery.scrollex.min.js"></script>
+        <script src="~/js/browser.min.js"></script>
+        <script src="~/js/breakpoints.min.js"></script>
+        <script src="~/js/util.js"></script>
+        <script src="~/js/main.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
