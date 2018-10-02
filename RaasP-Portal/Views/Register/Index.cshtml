@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Http.Features
+
+<!-- Register -->
+<section id="register" class="two">
+    <div id='registration' class="container">
+
+        <header>
+            <h2>Submit a Registration for FABRIC</h2>
+        </header>
+
+        <article class="item">
+            <header>To use FABRIC, you need the following:</header>
+            <ul>
+                <li>An account on the RaaSP Cloud Architecture</li>
+                <li>A Project Environment within which to conduct your research</li>
+            </ul>
+        </article>
+
+        <form method="post" action="#">
+
+           
+            <div class="row">
+
+                <partial name="../Register/User" />
+                <partial name="../Register/Environment" />
+
+                <div class="col-12">
+                    <a href="#submission" class="button submit">Submit</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div id='submission' class="container" style="display: none">
+
+        <header>
+            <h2>Your Request Has Been Submitted</h2>
+        </header>
+
+    </div>
+</section>

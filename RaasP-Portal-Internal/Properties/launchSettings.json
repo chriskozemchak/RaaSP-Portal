@@ -1,7 +1,7 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": true, 
-    "anonymousAuthentication": false, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": false,
     "iisExpress": {
       "applicationUrl": "http://localhost:50419",
       "sslPort": 44354
@@ -13,7 +13,8 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "launchUrl": "https://localhost:44354/"
     },
     "RaasP_Portal_Internal": {
       "commandName": "Project",

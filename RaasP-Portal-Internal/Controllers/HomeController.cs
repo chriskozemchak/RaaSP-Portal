@@ -8,6 +8,7 @@ using RaasP_Portal_Internal.Models;
 
 namespace RaasP_Portal_Internal.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()

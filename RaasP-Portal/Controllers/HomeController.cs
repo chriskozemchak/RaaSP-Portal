@@ -15,18 +15,9 @@ namespace RaasP_Portal.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+        public void SetRegistration() {
+            //This function sets the parameters form and layout for 
         }
 
         public IActionResult Privacy()

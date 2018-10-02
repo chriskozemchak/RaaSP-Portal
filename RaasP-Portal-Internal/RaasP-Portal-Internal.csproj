@@ -2,12 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <WebProject_DirectoryAccessLevelKey>1</WebProject_DirectoryAccessLevelKey>
+    <RootNamespace>RaasP_Portal_Internal</RootNamespace>
+    <AssemblyName>RaasP_Portal_Internal</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AngularJS.Core" Version="1.7.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="toastr" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>
