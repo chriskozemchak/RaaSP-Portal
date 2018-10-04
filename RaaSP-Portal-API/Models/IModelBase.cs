@@ -11,5 +11,7 @@ namespace RaaSP_Portal_API.Models
         string CreatedDate { get; set; }
         string ModifiedDate { get; set; }
         string Active { get; set; }
+        string CreatedById { get; set; }
+        string ModifiedById { get; set; }
     }
 }

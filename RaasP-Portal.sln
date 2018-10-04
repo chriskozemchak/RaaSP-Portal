@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaasP-Portal-External", "Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaasP-Portal-Internal", "RaasP-Portal-Internal\RaasP-Portal-Internal.csproj", "{DA8DCF28-A942-4C18-8CB1-D0E395CA0D45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaaSP-Portal-Management", "RaaSP-Portal-Management\RaaSP-Portal-Management.csproj", "{59C85E44-552B-45AC-A12E-B641BC10C220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-Management", "RaaSP-Portal-Management\RaaSP-Portal-Management.csproj", "{59C85E44-552B-45AC-A12E-B641BC10C220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaaSP-Portal-API", "RaaSP-Portal-API\RaaSP-Portal-API.csproj", "{45EC84E2-712D-4270-93AA-75C5F76731BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-API", "RaaSP-Portal-API\RaaSP-Portal-API.csproj", "{45EC84E2-712D-4270-93AA-75C5F76731BE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "RaaSP-Database", "RaaSP-Database\RaaSP-Database.sqlproj", "{6C2F89B0-930B-4E5F-879F-222523F1BE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{45EC84E2-712D-4270-93AA-75C5F76731BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45EC84E2-712D-4270-93AA-75C5F76731BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45EC84E2-712D-4270-93AA-75C5F76731BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2F89B0-930B-4E5F-879F-222523F1BE03}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
