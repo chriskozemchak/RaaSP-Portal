@@ -314,6 +314,7 @@ namespace RaaSP_Portal_Business.Authentication.SAML.Saml
 
             return samlEndpoint + queryStringSeparator + "SAMLRequest=" + HttpUtility.UrlEncode(this.GetRequest(AuthRequest.AuthRequestFormat.Base64));
         }
+
     }
 }
 

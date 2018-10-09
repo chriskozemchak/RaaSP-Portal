@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RaaSP_Portal_Business;
+using RaaSP_Portal_Business.Authentication;
 
 namespace RaaSP_Portal_API.Controllers.Request
 {
@@ -31,6 +28,9 @@ namespace RaaSP_Portal_API.Controllers.Request
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            //TODO:Handle User Approval
+            AuthenticationController.DirectAuthenticationMethod("SAML","","");
+
         }
 
         // PUT api/request/values/5

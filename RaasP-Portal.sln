@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaasP-Portal-External", "RaasP-Portal\RaasP-Portal-External.csproj", "{BF7FAAF3-F36E-4D87-AF07-4E0DF1130AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-External", "RaaSP-Portal-External\RaaSP-Portal-External.csproj", "{BF7FAAF3-F36E-4D87-AF07-4E0DF1130AB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaasP-Portal-Internal", "RaasP-Portal-Internal\RaasP-Portal-Internal.csproj", "{DA8DCF28-A942-4C18-8CB1-D0E395CA0D45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-Internal", "RaaSP-Portal-Internal\RaaSP-Portal-Internal.csproj", "{DA8DCF28-A942-4C18-8CB1-D0E395CA0D45}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-Management", "RaaSP-Portal-Management\RaaSP-Portal-Management.csproj", "{59C85E44-552B-45AC-A12E-B641BC10C220}"
 EndProject
@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-API", "RaaSP-P
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "RaaSP-Database", "RaaSP-Database\RaaSP-Database.sqlproj", "{6C2F89B0-930B-4E5F-879F-222523F1BE03}"
 EndProject
-Project("{81BE5007-4CAB-4670-AEEB-3DA6572B9D12}") = "RaaSP-DataLake-Hive", "HiveApplication1\RaaSP-DataLake-Hive.hiveproj", "{94C68499-058F-4F54-A7ED-4F64CD8198CB}"
+Project("{81BE5007-4CAB-4670-AEEB-3DA6572B9D12}") = "RaaSP-DataLake-Hive", "RaaSP-DataLake-Hive\RaaSP-DataLake-Hive.hiveproj", "{94C68499-058F-4F54-A7ED-4F64CD8198CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-DataAccess", "DataAccess\RaaSP-Portal-DataAccess.csproj", "{9DE17D0F-5BA1-42EF-BAB5-397E2ED54C51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaaSP-Portal-DataAccess", "RaaSP-Portal-DataAccess\RaaSP-Portal-DataAccess.csproj", "{9DE17D0F-5BA1-42EF-BAB5-397E2ED54C51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaaSP-Portal-Business", "RaaSP-Portal-Business\RaaSP-Portal-Business.csproj", "{3FB1958F-456F-4767-8A7B-D500134D168D}"
 EndProject

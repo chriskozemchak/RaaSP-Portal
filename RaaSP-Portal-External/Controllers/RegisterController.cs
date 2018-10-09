@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RaaSP_Portal_API;
+using RaaSP_Portal_Business.Authentication.SAML.Saml;
 using RaaSP_Portal_DataAccess.Models.Request;
 
 
@@ -25,6 +26,45 @@ namespace RaasP_Portal_External.Controllers
         // GET: Register/Details/5
         public ActionResult Details(int id)
         {
+            return View();
+        }
+
+        public ActionResult SamlConsume()
+        {
+            //specify the certificate that your SAML provider has given to you
+            string samlCertificate = @"-----BEGIN CERTIFICATE-----
+BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH123543==
+-----END CERTIFICATE-----";
+
+            Response samlResponse = new Response(samlCertificate);
+            samlResponse.LoadXmlFromBase64(Request.Form["SAMLResponse"]); //SAML providers usually POST the data into this var
+
+            if (samlResponse.IsValid())
+            {
+                //WOOHOO!!! user is logged in
+                //YAY!
+
+                //Some more optional stuff for you
+                //lets extract username/firstname etc
+                string username, email, firstname, lastname;
+                try
+                {
+                    username = samlResponse.GetNameID();
+                    email = samlResponse.GetEmail();
+                    firstname = samlResponse.GetFirstName();
+                    lastname = samlResponse.GetLastName();
+                }
+                catch (Exception ex)
+                {
+                    //insert error handling code
+                    //no, really, please do
+                    return null;
+                }
+
+                //user has been authenticated, put your code here, like set a cookie or something...
+                //or call FormsAuthentication.SetAuthCookie() or something
+                return View();
+            }
             return View();
         }
 

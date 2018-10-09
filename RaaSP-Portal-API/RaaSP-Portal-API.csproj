@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\RaaSP-Portal-DataAccess.csproj" />
     <ProjectReference Include="..\RaaSP-Portal-Business\RaaSP-Portal-Business.csproj" />
+    <ProjectReference Include="..\RaaSP-Portal-DataAccess\RaaSP-Portal-DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
