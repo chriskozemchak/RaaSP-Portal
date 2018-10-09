@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaaSP_Portal_API.Models
+namespace RaaSP_Portal_DataAccess.Models
 {
     interface IModelBase
 {
@@ -13,6 +13,6 @@ namespace RaaSP_Portal_API.Models
         string Active { get; set; }
         string CreatedById { get; set; }
         string ModifiedById { get; set;}
-        string none { get; }
+        
     }
 }

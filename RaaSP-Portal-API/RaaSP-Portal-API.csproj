@@ -8,9 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Environment\" />
-    <Folder Include="Controllers\User\" />
-    <Folder Include="Controllers\Request\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -19,6 +16,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\RaaSP-Portal-DataAccess.csproj" />
+    <ProjectReference Include="..\RaaSP-Portal-Business\RaaSP-Portal-Business.csproj" />
   </ItemGroup>
 
 </Project>
