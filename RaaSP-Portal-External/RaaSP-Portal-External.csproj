@@ -14,14 +14,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RaaSP-Database\RaaSP-Database.sqlproj" />
-    <ProjectReference Include="..\RaaSP-Portal-API\RaaSP-Portal-API.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="DataAccess\User\" />
     <Folder Include="Models\Environment\" />
   </ItemGroup>
 

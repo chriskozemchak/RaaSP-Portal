@@ -1,4 +1,7 @@
-﻿@using Microsoft.AspNetCore.Http.Features
+﻿@using Microsoft.AspNetCore.Http.Features;
+@model RaaSP_Portal_DataAccess.Models.Environment.Info
+
+
 
 <div class="col-12">Select Your Account Type</div>
 
@@ -11,9 +14,12 @@
     </div>
 </div>
 <div id="investigator" style="display: none" class="row col-12">
-    <div class="col-12"><input id="projectName" type="text" name="projectName" placeholder="Name of Research Project" /></div>
     <div class="col-12">
-
+        @Html.EditorFor(Model => Model.ProjectName)
+        <input id="projectName" type="text" name="projectName" placeholder="Name of Research Project" />
+    </div>
+    <div class="col-12">
+        @Html.EditorFor(Model => Model.ProjectType)
         <select id="projecType" name="projectType">
             <option>Select Project Type</option>
             <option>Geonomics</option>
@@ -24,6 +30,7 @@
         </select>
     </div>
     <div class="col-12">
+        @Html.EditorFor(Model =>Model.Description)
         <textarea name="message" placeholder="Research Project Description"></textarea>
     </div>
 </div>

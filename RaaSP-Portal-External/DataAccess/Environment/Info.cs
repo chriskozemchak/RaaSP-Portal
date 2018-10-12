@@ -1,25 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
-namespace RaaSP_Portal_DataAccess.Models.Request
+namespace RaaSP_Portal_Internal.DataAccess.Models.Environment
 {
-    public class User : IModelBase
+    [Table("INFO")]
+    public class Info : IModelBase
 
     {
         public string Id { get; set; }
 
         //User Specific Model
-        [Required (ErrorMessage = "Please Complete All Required Fields")]
-        public string FirstName { get; set; }
         [Required(ErrorMessage = "Please Complete All Required Fields")]
-        public string LastName { get; set; }
+        public string ProjectName { get; set; }
         [Required(ErrorMessage = "Please Complete All Required Fields")]
-        public string Email { get; set; }
-
-        public string Phone { get; set; }
+        public string ProjectType { get; set; }
         [Required(ErrorMessage = "Please Complete All Required Fields")]
-        public string Username { get; set; }
-        public string CtsId { get; set; }
+        public string Description { get; set; }
 
         public string CreatedDate { get; set; }
         public string ModifiedDate { get; set; }

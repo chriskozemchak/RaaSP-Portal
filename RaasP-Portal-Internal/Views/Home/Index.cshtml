@@ -2,6 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<partial name="../About/Index" />
-<partial name="../Register/Index" />
-<partial name="../Contact/Index" />
+<div>
+    @User.Identity.Name;</div>
+<div>
+    @User.Identity.IsAuthenticated;
+</div>
+<div>
+    @User.Identity.AuthenticationType;
+</div>
+<div>
+    @User.Claims.ToString();
+</div>
+
+
+
+            @if ((await AuthorizationService.AuthorizeAsync(User, "PolicyName")).Succeeded)
+            {
+                <p>This paragraph is displayed because you fulfilled PolicyName.</p>
+            }
+ 
+            <partial name="../About/Index" />
+            <partial name="../Register/Index" />
+            <partial name="../Contact/Index" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace RaaSP_Portal_DataAccess.Models.Request
+namespace RaaSP_Portal_Internal.DataAccess.Models.Request
 {
     public class User : IModelBase
 
