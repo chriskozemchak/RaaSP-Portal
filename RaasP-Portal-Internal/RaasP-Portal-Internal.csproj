@@ -5,6 +5,7 @@
     <WebProject_DirectoryAccessLevelKey>1</WebProject_DirectoryAccessLevelKey>
     <RootNamespace>RaasP_Portal_Internal</RootNamespace>
     <AssemblyName>RaasP_Portal_Internal</AssemblyName>
+    <UserSecretsId>0d6a8051-e88d-417e-89b2-1466659e5420</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
