@@ -1,7 +1,7 @@
-﻿using RaaSP_Portal_Internal.Business.Authentication.SAML;
-using RaaSP_Portal_Internal.Business.Authentication.SAML.Saml;
+﻿using RaaSP_Portal_External.Business.Authentication.SAML;
+using RaaSP_Portal_External.Business.Authentication.SAML.Saml;
 
-namespace RaaSP_Portal_Internal.Business.Authentication
+namespace RaaSP_Portal_External.Business.Authentication
 {
     public class AuthenticationController
     {

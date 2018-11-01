@@ -4,8 +4,8 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RaaSP_Portal_Internal.Business.Authentication.SAML.Saml;
-using RaaSP_Portal_Internal.DataAccess.Models.Request;
+using RaaSP_Portal_External.Business.Authentication.SAML.Saml;
+using RaaSP_Portal_External.DataAccess.Models.Request;
 
 
 
@@ -80,7 +80,7 @@ BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH123543==
         {
             try
             {
-                var requestEnvironment = new RaaSP_Portal_Internal.DataAccess.Models.Request.Environment();
+                var requestEnvironment = new RaaSP_Portal_External.DataAccess.Models.Request.Environment();
                 var environment = new Microsoft.Extensions.Primitives.StringValues();
                 var requestUser = new User();
                 var user = new Microsoft.Extensions.Primitives.StringValues();
@@ -120,7 +120,7 @@ BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH123543==
             // return URI of the created resource.
             return response.Headers.Location;
         }
-        static async Task<Uri> CreateEnvironmentRequestAsync(RaaSP_Portal_Internal.DataAccess.Models.Request
+        static async Task<Uri> CreateEnvironmentRequestAsync(RaaSP_Portal_External.DataAccess.Models.Request
             .Environment  environment)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(

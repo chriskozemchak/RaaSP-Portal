@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>RaasP_Portal_External</RootNamespace>
     <AssemblyName>RaasP_Portal_External</AssemblyName>
+    <UserSecretsId>fdbf8a5f-eb82-4c49-97b2-2028097c2c46</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

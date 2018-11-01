@@ -1,4 +1,4 @@
-﻿namespace RaaSP_Portal_Internal.DataAccess.Models.Request
+﻿namespace RaaSP_Portal_External.DataAccess.Models.Request
 {
     public class Environment: IModelBase
 
@@ -8,6 +8,7 @@
         //Environment Specific Model
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Type { get; set; }
 
         public string CreatedDate { get; set; }
         public string ModifiedDate { get; set; }

@@ -8,7 +8,7 @@ using System.IO.Compression;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace RaaSP_Portal_Internal.Business.Authentication.SAML.Saml
+namespace RaaSP_Portal_External.Business.Authentication.SAML.Saml
 {
     /// <summary>
     /// this class adds support of SHA256 signing to .NET 4.0 and earlier

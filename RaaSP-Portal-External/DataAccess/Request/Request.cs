@@ -1,4 +1,4 @@
-﻿namespace RaaSP_Portal_Internal.DataAccess.Models.Request
+﻿namespace RaaSP_Portal_External.DataAccess.Models.Request
 {
     public class Request : IModelBase
 

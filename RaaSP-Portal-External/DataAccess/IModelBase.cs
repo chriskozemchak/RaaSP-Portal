@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaaSP_Portal_Internal.DataAccess.Models
+namespace RaaSP_Portal_External.DataAccess.Models
 {
     interface IModelBase
 {

@@ -1,6 +1,6 @@
-﻿using RaaSP_Portal_Internal.Business.Authentication.SAML.Saml;
+﻿using RaaSP_Portal_External.Business.Authentication.SAML.Saml;
 
-namespace RaaSP_Portal_Internal.Business.Authentication.SAML
+namespace RaaSP_Portal_External.Business.Authentication.SAML
 {
     class AuthSaml
     {
