@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using RaasP_Portal_Internal.Models;
 
 namespace RaasP_Portal_Internal
 {
@@ -33,6 +35,9 @@ namespace RaasP_Portal_Internal
             .AddCookie();
 
             services.AddMvc();
+
+            services.AddDbContext<RaasP_Portal_InternalContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("RaasP_Portal_InternalContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
