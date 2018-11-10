@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace RaaSP_Portal_DataAccess.Models.Request
+namespace RaaSP_Portal_External.DataAccess.Models.Request
 {
     public class User : IModelBase
 
@@ -15,10 +15,10 @@ namespace RaaSP_Portal_DataAccess.Models.Request
         public string LastName { get; set; }
         [Required(ErrorMessage = "Please Complete All Required Fields")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Please Complete All Required Fields")]
+        public string Type { get; set; }
 
         public string Phone { get; set; }
-        [Required(ErrorMessage = "Please Complete All Required Fields")]
-        public string Username { get; set; }
         public string CtsId { get; set; }
 
         public string CreatedDate { get; set; }

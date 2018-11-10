@@ -1,19 +1,16 @@
-﻿@using Microsoft.AspNetCore.Http.Features
+﻿@using Microsoft.AspNetCore.Http.Features;
+@model RaaSP_Portal_External.DataAccess.Models.Request.Environment
+@
 
-<div class="col-12">Select Your Account Type</div>
 
-<div class="col-6 col-12-mobile">Basic:<input class="toggle" type="radio" checked="checked" name="account" value="basic"></div>
-<div class="col-6 col-12-mobile">Investigator:<input class="toggle" type="radio" name="account" value="investigator"></div>
-<div id="basic" class="row col-12">
-    <div class="col-12 ui-widget"><input id="projectName" class="projects" type="text" name="project" placeholder="Research Project Name" /></div>
-    <div class="col-12">
-        <textarea name="message" placeholder="Access Request Message"></textarea>
-    </div>
-</div>
+
 <div id="investigator" style="display: none" class="row col-12">
-    <div class="col-12"><input id="projectName" type="text" name="projectName" placeholder="Name of Research Project" /></div>
     <div class="col-12">
-
+        @Html.EditorFor(Model => Model.Name)
+        <input id="projectName" type="text" name="projectName" placeholder="Name of Research Project" />
+    </div>
+    <div class="col-12">
+        @Html.EditorFor(Model => Model.Type)
         <select id="projecType" name="projectType">
             <option>Select Project Type</option>
             <option>Geonomics</option>
@@ -24,6 +21,7 @@
         </select>
     </div>
     <div class="col-12">
+        @Html.EditorFor(Model => Model.Description)
         <textarea name="message" placeholder="Research Project Description"></textarea>
     </div>
 </div>

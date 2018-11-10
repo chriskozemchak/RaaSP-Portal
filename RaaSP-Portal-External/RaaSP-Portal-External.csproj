@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>RaasP_Portal_External</RootNamespace>
     <AssemblyName>RaasP_Portal_External</AssemblyName>
+    <UserSecretsId>fdbf8a5f-eb82-4c49-97b2-2028097c2c46</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,14 +15,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RaaSP-Database\RaaSP-Database.sqlproj" />
-    <ProjectReference Include="..\RaaSP-Portal-API\RaaSP-Portal-API.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="DataAccess\User\" />
     <Folder Include="Models\Environment\" />
   </ItemGroup>
 
