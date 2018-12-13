@@ -51,8 +51,7 @@ namespace RaasP_Portal_Internal
             app.UseStaticFiles();
 
             app.UseAuthentication();
-            //Set Route based on Identity
-            
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Principal
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -20,49 +22,136 @@
 <body class="is-preload">
 
 
+    <!-- Nav -->
 
-    <!-- Content -->
-        @RenderBody()
+    @if (User.Identity.IsAuthenticated)
+    {
+        <!-- Header -->
+        <div id="header">
+
+            <div class="top">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image"><img src="images/avatar.png" alt="" /></span>
+                    <h1 id="title">FABRIC</h1>
+                    <p>Administrator<br>Dashboard</p>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#top" id="top-link"><span class="icon fa-flask">Dashboard</span></a></li>
+                        <li><a href="#environment" id="register-link"><span class="icon fa-desktop">Environments</span></a></li>
+                        <li><a href="#users" id="users-link"><span class="icon fa-users">Users</span></a></li>
+                        <li><a href="#configuration" id="configuration-link"><span class="icon fa-cogs">Requests</span></a></li>
+                        <li><a href="#modify " id="requests-link"><span class="icon fa-plug">Add Environment</span></a></li>
+                        <li><a href="#account " id="requests-link"><span class="icon fa-user-plus">Add User Account</span></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="bottom">
+
+                <!-- Social Icons -->
+                <ul class="icons">
+                    <li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
+                    <li><a href="dashboard-pi.html" class="icon fa-user"><span class="label">PI Dashboard</span></a></li>
+                    <li><a href="dashboard-admin.html" class="icon fa-cogs"><span class="label">Admin Page</span></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    }
+    else
+    {
+        <!-- Header -->
+        <div id="header">
+
+            <div class="top">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image"><img src="images/avatar.png" alt="" /></span>
+                    <h1 id="title">FABRIC</h1>
+                    <p>Principal Investigator<br>Dashboard</p>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#top" id="top-link"><span class="icon fa-flask">Dashboard</span></a></li>
+                        <li><a href="#environment" id="register-link"><span class="icon fa-desktop">Environment</span></a></li>
+                        <li><a href="#users" id="users-link"><span class="icon fa-users">Users</span></a></li>
+                        <li><a href="#configuration" id="configuration-link"><span class="icon fa-cogs">Configuration</span></a></li>
+                        <li><a href="#modify " id="requests-link"><span class="icon fa-plug">Modify</span></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="bottom">
+
+                <!-- Social Icons -->
+                <ul class="icons">
+                    <li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
+                    <li><a href="dashboard-pi.html" class="icon fa-user"><span class="label">PI Dashboard</span></a></li>
+                    <li><a href="dashboard-admin.html" class="icon fa-cogs"><span class="label">Admin Page</span></a></li>
+                </ul>
+
+            </div>
+            </div>
+            }
 
 
-    <!-- Footer -->
-    <div id="footer">
 
-        <!-- Copyright -->
-        <ul class="copyright">
-            <li>&copy; RTS. All rights reserved.</li>
-            <li>FABRIC</li>
-        </ul>
 
-    </div>
-    <!-- Scripts -->
-    <environment include="Development">
 
-        <script src="~/js/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="~/js/jquery.scrolly.min.js"></script>
-        <script src="~/js/jquery.scrollex.min.js"></script>
-        <script src="~/js/browser.min.js"></script>
-        <script src="~/js/breakpoints.min.js"></script>
-        <script src="~/js/util.js"></script>
-        <script src="~/js/main.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+            <!-- Content -->
+            @RenderBody()
 
-    @RenderSection("Scripts", required: false)
-</body>
+
+            <!-- Footer -->
+            <div id="footer">
+
+                <!-- Copyright -->
+                <ul class="copyright">
+                    <li>&copy; RTS. All rights reserved.</li>
+                    <li>FABRIC</li>
+                    <li><partial name="_LoginPartial" /></li>
+                </ul>
+
+            </div>
+            <!-- Scripts -->
+            <environment include="Development">
+
+                <script src="~/js/jquery.min.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script src="~/js/jquery.scrolly.min.js"></script>
+                <script src="~/js/jquery.scrollex.min.js"></script>
+                <script src="~/js/browser.min.js"></script>
+                <script src="~/js/breakpoints.min.js"></script>
+                <script src="~/js/util.js"></script>
+                <script src="~/js/main.js" asp-append-version="true"></script>
+            </environment>
+            <environment exclude="Development">
+                <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                        asp-fallback-test="window.jQuery"
+                        crossorigin="anonymous"
+                        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+                </script>
+                <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                        crossorigin="anonymous"
+                        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+                </script>
+                <script src="~/js/site.min.js" asp-append-version="true"></script>
+            </environment>
+
+            @RenderSection("Scripts", required: false)
+    </body>
 </html>

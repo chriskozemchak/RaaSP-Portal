@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RaasP_Portal_Internal.Controllers.Request
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class NewEnvironmentController : Controller
     {
         // GET: NewEnvironment

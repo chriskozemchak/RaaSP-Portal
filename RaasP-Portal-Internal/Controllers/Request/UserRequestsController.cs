@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RaasP_Portal_Internal.Controllers.Request
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class UserRequestsController : Controller
     {
         // GET: UserRequests

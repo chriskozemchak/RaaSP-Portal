@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RaasP_Portal_Internal.Controllers.Notification
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class NotificationDetailController : Controller
     {
         // GET: NotificationDetail

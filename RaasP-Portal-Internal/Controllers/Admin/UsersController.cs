@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RaasP_Portal_Internal.Controllers.Admin
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class UsersController : Controller
     {
         // GET: Users
