@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal;
+using RaasP_Portal_Internal.Models;
 
 namespace RaasP_Portal_Internal.Models
 {
@@ -14,6 +14,6 @@ namespace RaasP_Portal_Internal.Models
         {
         }
 
-        public DbSet<RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal.Request> Request { get; set; }
+        public DbSet<RaasP_Portal_Internal.Models.Request> Request { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal
+namespace RaasP_Portal_Internal.Models
 {
     public class CtsaInstitution
     {
@@ -15,7 +15,19 @@ namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal
         public string ModifiedDate { get; set; }
         public string CreatedDate { get; set; }
         public Boolean Active { get; set; }
-        public AccountRequest accountrequest { get; set; }
+        public Request AccountRequest { get; set; }
 
+        public class SAMLUrl
+        {
+            public PrincipalInvestigatorEnvironment principalInvestigatorEnvironment { get; set; }
+            public CtsaInstitution inst;
+            public SAMLUrl() { }
+
+            public SAMLUrl(CtsaInstitution inst)
+            {
+                   this.inst = inst;
+            }
+        }
+         
     }
 }

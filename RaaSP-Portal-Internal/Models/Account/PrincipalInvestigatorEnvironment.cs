@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Account.CtsaInstitution;
+using RaasP_Portal_Internal.Models;
+using static RaasP_Portal_Internal.Models.CtsaInstitution;
 
-namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Account
+namespace RaasP_Portal_Internal.Models
 {
-    public class PrincipalInvestigatorEnvironment
+    public class PrincipalInvestigatorEnvironments
     {
         public int ID { get; set; }
         public string ProjectName { get; set; }
         public string ModifiedDate { get; set; }
         public string CreatedDate { get; set; }
         public Boolean Active { get; set; }
-        public AccountRequest accountrequest { get; set; }
+        public Request accountrequest { get; set; }
         public SAMLUrl saml { get; set; }
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal
+namespace RaasP_Portal_Internal.Models
 {
-    public class Request
+    public class RequestType
     {
         public int ID { get; set; }
+        public string TypeName { get; set; }
         public string ModifiedDate { get; set; }
         public string CreatedDate { get; set; }
         public Boolean Active { get; set; }
-        public AccountRequest accountrequest { get; set; }
-        public PIERequest pierequest { get; set; }
+        public Request request { get; set; }
     }
 }

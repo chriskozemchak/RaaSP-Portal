@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal
+namespace RaasP_Portal_Internal.Models
 {
     public class PIERequest
     {

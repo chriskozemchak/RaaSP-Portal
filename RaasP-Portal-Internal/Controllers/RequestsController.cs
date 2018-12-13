@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RaasP_Portal_Internal.Models;
-using RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Internal;
 
 namespace RaaSP_Portal_Internal.Controllers
 {

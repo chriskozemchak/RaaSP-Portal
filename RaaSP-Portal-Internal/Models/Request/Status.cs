@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RaasP_Portal_Internal.Models.RaaSP_Architecture_Request_Account
+namespace RaasP_Portal_Internal.Models
 {
-    public class RequestType
+    public class Status
     {
         public int ID { get; set; }
-        public string TypeName { get; set; }
+        public string StatusName { get; set; }
         public string ModifiedDate { get; set; }
-        public string CreatedDate { get; set; }
+        public int RequestId { get; set; }
         public Boolean Active { get; set; }
-        public Request request { get; set; }
+
     }
 }
