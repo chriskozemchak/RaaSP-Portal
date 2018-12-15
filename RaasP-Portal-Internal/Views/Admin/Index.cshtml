@@ -1,10 +1,21 @@
-﻿<partial name="../Admin/AdminMenu" />
+﻿@using Microsoft.AspNetCore.Http.Features
 
-<div id="main">
-    <partial name="../Admin/Main" />
-    <partial name="../Admin/Environments" />
-    <partial name="../Admin/Users" />
-    <partial name="../Admin/Requests" />
-    <partial name="../Request/NewEnvironment" />
-    <partial name="../Request/NewUser" />
-</div>
+<!--Admin-->
+<section id="requests" class="one">
+    <div class="container">
+
+        <header>
+            <h2>Welcome to Admin dashboard</h2>
+        </header>
+        <partial name="../Admin/AdminMenu" />
+
+        <div id="main">
+            <partial name="../Admin/Main" />
+            <partial name="../Admin/Environments" />
+            <partial name="../Admin/Users" />
+            <partial name="../Admin/Requests" />
+            <partial name="../Request/NewEnvironment" />
+            <partial name="../Request/NewUser" />
+        </div>
+    </div>
+</section>

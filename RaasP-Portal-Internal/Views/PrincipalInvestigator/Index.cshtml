@@ -1,10 +1,22 @@
-﻿<partial name="../PrincipalInvestigator/PiMenu" />
+﻿@using Microsoft.AspNetCore.Http.Features
 
-<div id="main">
-    <partial name="../PrincipalInvestigator/Main" />
-    <partial name="../PrincipalInvestigator/Environment" />
-    <partial name="../PrincipalInvestigator/Users" />
-    <partial name="../PrincipalInvestigator/Configuration" />
-    <partial name="../Request/NewEnvironment" />
+<!--Principal Investigator-->
+<section id="requests" class="one">
+    <div class="container">
 
-</div>
+        <header>
+            <h2>Welcome to PI dashboard</h2>
+        </header>
+
+        <partial name="../PrincipalInvestigator/PiMenu" />
+
+        <div id="main">
+            <partial name="../PrincipalInvestigator/Main" />
+            <partial name="../PrincipalInvestigator/Environment" />
+            <partial name="../PrincipalInvestigator/Users" />
+            <partial name="../PrincipalInvestigator/Configuration" />
+            <partial name="../Request/NewEnvironment" />
+
+        </div>
+    </div>
+</section>
