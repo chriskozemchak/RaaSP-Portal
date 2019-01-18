@@ -1,10 +1,16 @@
 ﻿@using Microsoft.AspNetCore.Http.Features
 @model RaaSP_Portal_External.DataAccess.Models.Request.User
 
+@{
+    ViewBag.Title = "User";
+}
+
+@Html.AntiForgeryToken()
+
 @Html.EditorFor(Model => Model.FirstName)
 <div class="col-6 col-12-mobile"><input type="text" name="first name" placeholder="First Name" /></div>
 @Html.EditorFor(Model => Model.LastName)
-<div class="col-6 col-12-mobile"><input type="text" name="last email" placeholder="Last Name" /></div>
+<div class="col-6 col-12-mobile"><input type="text" name="last name" placeholder="Last Name" /></div>
 @Html.EditorFor(Model => Model.Email)
 <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
 @Html.EditorFor(Model => Model.Phone)
@@ -13,11 +19,14 @@
 <div class="col-6 col-12-mobile ui-widget"><input id="institute" class="ctsa" type="text" name="project" placeholder="CTSA Institute" /></div>
 <div class="col-12">Select Your Account Type</div>
 
-@Html.EditorFor(Model => Model.Type)
+@*@Html.EditorFor(Model => Model.Type)*@
 
 
-<div class="col-6 col-12-mobile">Basic:<input class="toggle" type="radio" checked="checked" name="account" value="basic">@Html.RadioButton(Model.Type.ToString(),
-    Model.Type)</div>
+<div class="col-6 col-12-mobile">
+    @*@Html.EditorFor(Model => Model.Type)*@
+    Basic:<input class="toggle" type="radio" checked="checked" name="account" value="basic">
+    @*<label><%= Html.RadioButton(Model.Type, Model.Type.ToString()) %> Yes</label>*@
+</div>
 <div class="col-6 col-12-mobile">Investigator:<input class="toggle" type="radio" name="account" value="investigator"></div>
 <div id="basic" class="row col-12">
     <div class="col-12 ui-widget"><input id="projectName" class="projects" type="text" name="project" placeholder="Research Project Name" /></div>

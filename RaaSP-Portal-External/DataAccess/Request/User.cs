@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RaaSP_Portal_External.DataAccess.Models.Request
 {
-    public class User : IModelBase
+    public class User
 
     {
         public string Id { get; set; }

@@ -35,7 +35,7 @@ namespace RaasP_Portal_External.Controllers
 BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH123543==
 -----END CERTIFICATE-----";
 
-            Response samlResponse = new Response(samlCertificate);
+            var samlResponse = new Response(samlCertificate);
             samlResponse.LoadXmlFromBase64(Request.Form["SAMLResponse"]); //SAML providers usually POST the data into this var
 
             if (samlResponse.IsValid())
